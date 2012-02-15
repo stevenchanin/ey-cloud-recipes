@@ -120,3 +120,6 @@
   # postgresql9_pg_stat_statements "todo" - Not done
   
 # end
+
+#uncomment to turn on rds recipe. Make sure to set the appropriate attributes in cookbooks/rds/attributes/rds.rb
+#require_recipe "rds"
