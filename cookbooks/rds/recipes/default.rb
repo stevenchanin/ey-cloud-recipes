@@ -5,7 +5,7 @@
 # Configure application servers to use an Amazon RDS database (or any external ActiveRecord-compatible database)
 # Note: This recipe does not make any changes to Engine Yard-provisioned databases
 
-if ['solo', 'app_master', 'app'].include?(node[:instance_role])
+if ['solo', 'app_master', 'app', 'utility'].include?(node[:instance_role])
   # for each application
   node.engineyard.apps.each do |app|
     # retrieve attributes
