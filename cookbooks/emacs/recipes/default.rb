@@ -3,14 +3,15 @@
 # Recipe:: default
 #
 
-remote_file "/engineyard/portage/distfiles/eselect-emacs-1.8.tar.bz2" do
-  source "http://mirror.internode.on.net/pub/gentoo-portage/distfiles/eselect-emacs-1.8.tar.bz2"
-  owner "root"
-  group "root"
-  mode "0655"
-  backup 0
-  not_if { FileTest.exists?("/engineyard/portage/distfiles/eselect-emacs-1.8.tar.bz2") }
-end
+# updated to emacs 23, but then ignored by emerge anyway ... so commented out
+# remote_file "/engineyard/portage/distfiles/emacs-23.4.tar.gz" do
+#   source "http://mirrors.kernel.org/gnu/emacs/emacs-23.4.tar.gz"
+#   owner "root"
+#   group "root"
+#   mode "0655"
+#   backup 0
+#   not_if { FileTest.exists?("/engineyard/portage/distfiles/emacs-23.4.tar.gz") }
+# end
 
 execute "install_emacs" do
   command "emerge app-editors/emacs"
